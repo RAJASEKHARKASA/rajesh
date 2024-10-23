@@ -1,3 +1,4 @@
+//checking the character in a string is a vowel or consonennt and mentioning the count of vowels and consonents
 // Package declaration
 package com.Sample;
 
@@ -17,7 +18,8 @@ public class vowelsconsonentsprint {
     public static void printVowelsAndConsonants(String str) {
         // Convert the string to lower case to handle case insensitivity
         str = str.toLowerCase();
-        
+        int consonentcount=0;
+        int vowelcount=0;
         // Iterate through each character in the string
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i); // Get the current character
@@ -26,13 +28,19 @@ public class vowelsconsonentsprint {
             if (isConsonant(ch)) {
                 // Print the consonant
                 System.out.println(ch + " is a Consonant");
+                consonentcount++;
             } 
             // Check if the character is a vowel
             else if (isVowel(ch)) {
                 // Print the vowel
                 System.out.println(ch + " is a Vowel");
+                vowelcount++;
             }
+            
         }
+        
+        System.out.println("String having "+ consonentcount +"consonents.");
+        System.out.println("String having "+ vowelcount +"vowels.");
     }
 
     // Helper method to check if a character is a vowel
